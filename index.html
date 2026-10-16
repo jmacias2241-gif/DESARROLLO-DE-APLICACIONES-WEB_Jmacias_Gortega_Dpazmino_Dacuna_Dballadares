@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - Help Desk UI Kit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <header style="margin-bottom: 40px; border-bottom: 2px solid var(--color-border); padding-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px;">
+                <img src="assets/img/logo-utm.png" alt="Logotipo Universidad Técnica de Manabí" style="height: 65px; width: auto; object-fit: contain;">
+                
+                <div style="border-left: 2px solid var(--color-border); padding-left: 20px;">
+                    <p style="font-size: 12px; text-transform: uppercase; color: var(--color-text-muted); font-weight: bold; margin: 0; letter-spacing: 0.5px;">Universidad Técnica de Manabí</p>
+                    <h1 style="margin: 5px 0 0 0; font-size: 28px;">Help Desk Design System</h1>
+                </div>
+            </div>
+            <p style="color: var(--color-text-muted); margin: 0;">Librería de componentes UI puros, modulares y reutilizables para el sistema de gestión de incidentes.</p>
+        </header>
+
+        <section class="section-demo">
+            <h2>1. Botones</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 15px;">Variaciones de estados normales, selección e interacción.</p>
+            <div class="component-group">
+                <button class="btn btn-primary">Acción Primaria</button>
+                <button class="btn btn-secondary">Acción Secundaria</button>
+                <button class="btn btn-danger">Eliminar / Peligro</button>
+            </div>
+        </section>
+
+        <section class="section-demo">
+            <h2>2. Elementos de Formulario</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 15px;">Campos de entrada de datos con estados de enfoque estables.</p>
+            <div class="component-group">
+                <div class="form-group">
+                    <label class="form-label" for="ticket-title">Título del Incidente</label>
+                    <input type="text" id="ticket-title" class="form-input" placeholder="Ej. Caída de servidor principal">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="ticket-category">Categoría</label>
+                    <select id="ticket-category" class="form-select">
+                        <option value="">Seleccione una opción</option>
+                        <option value="net">Redes e Infraestructura</option>
+                        <option value="hw">Soporte de Hardware</option>
+                        <option value="sw">Fallo de Software</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-demo">
+            <h2>3. Etiquetas de Prioridad</h2>
+            <div class="component-group">
+                <span class="badge badge-high">Prioridad Alta</span>
+                <span class="badge badge-medium">Prioridad Media</span>
+                <span class="badge badge-low">Prioridad Baja</span>
+            </div>
+        </section>
+
+        <section class="section-demo">
+            <h2>4. Tarjeta de Incidente</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 15px;">Demostración de estructura de un ticket bajo sombra y bordes variables.</p>
+            
+            <div class="component-group" style="align-items: stretch;">
+                <div class="card-ticket high">
+                    <div class="card-header">
+                        <span class="card-title">Ticket #1024</span>
+                        <span class="badge badge-high">Alta</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Fallo crítico en el enlace troncal de fibra óptica de la Universidad tecnica de Manabí. Sin acceso al backbone principal.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>Asignado a: Supervisor General</span>
+                        <span>Hace 5 min</span>
+                    </div>
+                </div>
+
+                <div class="card-ticket medium">
+                    <div class="card-header">
+                        <span class="card-title">Ticket #1025</span>
+                        <span class="badge badge-medium">Media</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Intermitencia en el switch de distribución del tercer piso. Pérdida de paquetes aleatoria.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>Asignado a: Soporte Técnico</span>
+                        <span>Hace 1 hora</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
